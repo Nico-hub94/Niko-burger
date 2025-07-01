@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIKO BURGER - Menú</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div id="app">
+        <header class="bg-white shadow-sm border-b">
+            <div class="max-w-md mx-auto px-4 py-4">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-900">NIKO BURGER</h1>
+                        <p class="text-sm text-gray-600">Hamburguesas artesanales</p>
+                    </div>
+                    <button onclick="toggleCart()" class="relative bg-red-600 text-white px-4 py-2 rounded-lg">
+                        🛒 Carrito (<span id="cart-count">0</span>)
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="max-w-md mx-auto px-4 py-6">
+            <!-- Hamburguesas -->
+            <section class="mb-8">
+                <h2 class="text-xl font-semibold mb-4 text-gray-900">Hamburguesas</h2>
+                <div class="space-y-4">
+                    <div class="bg-white rounded-lg shadow-sm border p-4">
+                        <h3 class="font-medium text-gray-900">Cheese Simple</h3>
+                        <p class="text-sm text-gray-600 mb-2">Pan, carne casera y queso cheddar</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-semibold text-red-600">₲10.000</span>
+                            <button onclick="addToCart('cheese-simple', 'Cheese Simple', 10000)" 
+                                    class="bg-red-600 text-white px-3 py-1 rounded text-sm">Agregar</button>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm border p-4">
+                        <h3 class="font-medium text-gray-900">Cheese Doble</h3>
+                        <p class="text-sm text-gray-600 mb-2">Pan, carne casera doble y queso cheddar</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-semibold text-red-600">₲15.000</span>
+                            <button onclick="addToCart('cheese-doble', 'Cheese Doble', 15000)" 
+                                    class="bg-red-600 text-white px-3 py-1 rounded text-sm">Agregar</button>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm border p-4">
+                        <h3 class="font-medium text-gray-900">Hambur Completa Simple</h3>
+                        <p class="text-sm text-gray-600 mb-2">Pan, carne casera, lechuga, tomate, panceta y queso cheddar</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-semibold text-red-600">₲15.000</span>
+                            <button onclick="addToCart('hambur-completa', 'Hambur Completa Simple', 15000)" 
+                                    class="bg-red-600 text-white px-3 py-1 rounded text-sm">Agregar</button>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm border p-4">
+                        <h3 class="font-medium text-gray-900">Hambur Completa Doble</h3>
+                        <p class="text-sm text-gray-600 mb-2">Pan, carne casera doble, lechuga, tomate, panceta y queso cheddar</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-semibold text-red-600">₲20.000</span>
+                            <button onclick="addToCart('hambur-completa-doble', 'Hambur Completa Doble', 20000)" 
+                                    class="bg-red-600 text-white px-3 py-1 rounded text-sm">Agregar</button>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm border p-4">
+                        <h3 class="font-medium text-gray-900">Tata Burger Simple</h3>
+                        <p class="text-sm text-gray-600 mb-2">Pan, carne casera, panceta, cebolla caramelizada y salsa picante</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-semibold text-red-600">₲20.000</span>
+                            <button onclick="addToCart('tata-burger', 'Tata Burger Simple', 20000)" 
+                                    class="bg-red-600 text-white px-3
